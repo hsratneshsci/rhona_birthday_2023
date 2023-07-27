@@ -4,7 +4,7 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-    birthdate: 'August 2, 2022 ',
+    birthdate: 'july 28, 2004 ',
     name: 'Rhona Loscar Fernandez'
 };
 
