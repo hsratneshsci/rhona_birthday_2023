@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="ie lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> <html> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!-- <![endif]-->
+
+<script>
+    const config = {
+        birthdate: 'August 2, 2021',
+        name: 'Rhona Loscar Fernandez'
+    };
+
+
+    let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
+    let now = new Date().getTime(),
+        distance = countDown - now;
+
+
+    if (distance > 0) {
+        window.location = 'index.html'
+    }
+</script>
+
+<head>
+    <title>Happy Birthday</title>
+    <link rel="icon" href="images_or_extras/favicon.ico">
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Happy Birthday Didi">
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Birthday, Happy">
+    <!-- Strat of Facebook Meta -->
+    <meta property="og:type" content="E-Greeting" />
+    <meta property="og:image" content="images_or_extras/favicon.ico" />
+    <meta property="og:description" content="Wish you a very Happy Birthday">
+    <!-- End of Facebook Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="styles/loading.css">
+    <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet/less" href="styles/cake.less">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+    <canvas id="confetti"></canvas>
+
+    <div id="merrywrap" class="merrywrap">
+        <canvas id="snowfall"></canvas>
+        <!-- <div class="giftbox"> -->
+        <div class="cover">
+            <div></div>
+        </div>
+        <div class="box"></div>
+        <!-- </div> -->
+    </div>
+    <div class="loading"></div>
+    <img src="images_or_extras/guitarman.gif" alt="Gif" width="200vw" height="400vh" style="position: fixed;bottom: -50px;left:-20px;display: none;z-index: 9999999999;" id="guitarman">
+    <img src="images_or_extras/ct.gif" alt="Gif" width="200vw" height="400vh" style="position: fixed;bottom: -50px;left:20px;display: none;z-index: 9999999999;" id="guitarman">
+    <audio class="song" controls loop>
+        <source src="images_or_extras/hbd.mp3"></source>
+	   Your browser isn't invited for super fun audio time.
+    </audio>
+    <div id="fullscreen">
+        <div class="contain">
+            <div class="balloons text-center" style="margin:-10px" id="b1">
+                <h2 style="color:#F2B300;">R</h2>
+            </div>
+            <div class="balloons text-center" id="b2">
+                <h2 style="color:#0719D4;">H</h2>
+            </div>
+            <div class="balloons text-center" id="b3">
+                <h2 style="color:#D14D39;">O</h2>
+            </div>
+            <div class="balloons text-center" id="b4">
+                <h2 style="color:#8FAD00;">N</h2>
+            </div>
+            <div class="balloons text-center" id="b5">
+                <h2 style="color:#8377E4;">A</h2>
+            </div>
+            <div class="balloons text-center" id="b6">
+                <h2 style="color:#8377E4;">🤍</h2>
+            </div>
+        </div>
+
+        <img src="images_or_extras/Balloon-Border.png" width="100%" class="balloon-border">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-2 col-xs-2 bulb-holder">
+                    <div class="bulb" id="bulb_yellow"></div>
+                </div>
+                <div class="col-md-2 col-xs-2 bulb-holder">
+                    <div class="bulb" id="bulb_red"></div>
+                </div>
+                <div class="col-md-2 col-xs-2 bulb-holder">
+                    <div class="bulb" id="bulb_blue"></div>
+                </div>
+                <div class="col-md-2 col-xs-2 bulb-holder">
+                    <div class="bulb" id="bulb_green"></div>
+                </div>
+                <div class="col-md-2 col-xs-2 bulb-holder">
+                    <div class="bulb" id="bulb_pink"></div>
+                </div>
+                <div class="col-md-2 col-xs-2 bulb-holder">
+                    <div class="bulb" id="bulb_orange"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="images_or_extras/banner.png" class="bannar">
+                </div>
+            </div>
+            <div class="row cake-cover">
+                <div class="col-md-12 texr-center">
+                    <div class="cake">
+                        <div class="velas">
+                            <div class="fuego"></div>
+                            <div class="fuego"></div>
+                            <div class="fuego"></div>
+                            <div class="fuego"></div>
+                            <div class="fuego"></div>
+                        </div>
+                        <div class="cobertura"></div>
+                        <div class="bizcocho"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row message">
+                <div class="col-md-12" style="z-index: 99999999999999999999999999999999999;">
+                    <p>Happy Birthday, my dear friend Rhona! 🎈🎉 Even though we haven't met in person, our bond feels like we've known each other forever! 🤝💕</p>
+                    <p>Your gaming prowess is legendary, and your friendship is a treasure that brightens every moment! 🌟🎮</p>
+                    <p>Whether in-game or in life, you have a magical touch that makes everything better! ✨🏰</p>
+                    <p>Our gaming adventures have been unforgettable, and I can't wait to create more epic memories with you! 🚀🎮</p>
+                    <p>Your kindness and compassion make you an angel in our lives, filling our hearts with warmth! 💖👼</p>
+                    <p>Even across the virtual distance, our bond is strong, and I hold our friendship close to my heart! 🤗💖</p>
+                    <p>Here's to a fabulous birthday, my lovely gaming buddy! 🎂🎮 Let's keep conquering virtual realms until the day we can celebrate in person! 🌐🤝</p>
+                    <p>Virtual hugs and love to you on your special day! 🤗🎁 May this year be filled with happiness and success! 🌈💖</p>
+                    <p>Happy Birthday, Rhona! 🎂🎈 You're the best online friend anyone could wish for! Let's continue to support each other and create lasting memories! 🤝💕</p>
+                    <p>Distance can't diminish our friendship! Cheers to more years of laughter, fun, and gaming galore! 🥂🎮</p>
+                    <p>May your day be brimming with joy, surprises, and legendary loot drops! 🎁🎉 Happy Birthday!</p>
+                    <p>You're not just a gamer; you're an extraordinary friend who means the world to me! 💖🎮</p>
+                    <p>Looking forward to a future filled with more meet-ups and thrilling in-game escapades! 🌟🎮</p>
+                    <p>Happiest Birthday to my sweet and adorable friend! 🎂🥳 May you continue to shine like the star you are! ✨🌟</p>
+                    <p>I promise to stand by you, supporting and cheering you on, through thick and thin! 🤝💪</p>
+                    <p>Though we're apart, our hearts are united by our love for gaming and our unbreakable friendship! ❤️🎮</p>
+                    <p>Happy Birthday, my wonderful bestie! 🎂🎈 May your life be filled with boundless joy and happiness! 🌍💕</p>
+                    <p>As the ultimate gaming duo, there's no challenge we can't conquer together! 🎮👭</p>
+                    <p>You bring a touch of magic to every moment, and I cherish the memories we've shared! 🌸💖</p>
+                </div>
+            </div>
+
+
+
+            <div class="navbar navbar-fixed-bottom">
+                <div class="row">
+                    <div class="col-md-6 text-center col-md-offset-3">
+                        <button class="btn btn-primary" id="turn_on">Turn On Lights</button>
+                        <button class="btn btn-primary" id="play">Play ur fav Music</button>
+                        <button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
+                        <button class="btn btn-primary" id="balloons_flying">Fly With Balloons</button>
+                        <button class="btn btn-primary" id="cake_fadein">Most Delicious Cake Ever</button>
+                        <button class="btn btn-primary" id="light_candle"> Light Candle</button>
+                        <button class="btn btn-primary" id="wish_message">Happy Birthday</button>
+                        <button class="btn btn-primary" id="story">A mesage for you</button>
+                        <button class="btn btn-primary" id="end_card">Now to end it, Here's a card for u</button>
+                        <button class="btn btn-primary" id="blow_candle">Blow Candles</button>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="script/effect.js"></script>
+<script src="script/confetti.min.js"></script>
+
+
+</html>
